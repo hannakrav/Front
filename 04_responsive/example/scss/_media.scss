@@ -1,0 +1,62 @@
+@media (max-width: 1100px) {
+    .main-content-wrap {
+        .header {
+            padding: 10px 5%;
+            justify-content: space-between;
+            .hamburger {
+                display: flex;
+            }
+            .menu,
+            .social-networks {
+                display: none;
+            }
+        }
+        .main-section {
+            &__title {
+                line-height: 50px;
+                margin-bottom: 20px;
+            }
+            &__title,
+            &__subtitle {
+                padding: 0 5%;
+            }
+            .product-card {
+                padding: 40px;
+                width: 95%;
+                &__title,
+                &__description-content {
+                    width: auto;
+                }
+                &__image {
+                    display: none;
+                }
+                .price {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 460px) {
+    .main-content-wrap {
+        .main-section {
+            &__subtitle {
+                margin-bottom: 120px;
+            }
+            .product-card {
+                .price {
+                    margin-bottom: 30px;
+                    &__content {
+                        font-size: 20px;
+                        margin-right: 22px;
+                    }
+                    &__button {
+                        padding: 14px 24px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

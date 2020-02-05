@@ -1,0 +1,53 @@
+.header__logo a {
+    /* название шрифта */
+    font-family: 'Montserrat', sans-serif;
+    /* насыщенность шрифта */
+    font-weight: bold;
+    /* размер шрифта */
+    font-size: 34px;
+}
+
+.header,
+.header .menu ul,
+.header .social-networks {
+    display: flex;
+}
+
+.header .menu .menu__link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    /* текст в верхнем регистре */
+    text-transform: uppercase;
+    /* внутренний отступ (первое число – отступ с верхнего края и нижнего, второе – с правого и левого) */
+    padding: 7px 10px;
+    /* внешний отступ (со значениями логика такая же) */
+    margin: 0 5px;
+    /* анимация свойств которые будут меняться */
+    transition: 300ms;
+}
+
+.header .menu .menu__link:hover {
+    color: #fff;
+    background-color: #00b0ff;
+}
+
+.header .social-networks .social-networks__link {
+    width: 36px;
+    height: 36px;
+    background-color: #000;
+    /* задаем данное отображение чтобы мы могли выравнивать содержимое контейнера при помощи флексбоксов */
+    display: flex;
+    /* выравниваем по горизонтали по центру */
+    justify-content: center;
+    /* выравниваем по вертикали по центру */
+    align-items: center;
+    margin: 0 5px;
+    /* задаем скругление углов */
+    border-radius: 50px;
+}
+
+.header {
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+}

@@ -1,0 +1,205 @@
+.main-content-wrap {
+    background-image: url(./../assets/img/wave-bg.jpg);
+    /* по умолчанию картинка дублируется и если вы этого не хотите – прописывайте это свойство */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-section .main-section__title,
+.main-section .main-section__subtitle {
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-style: italic;
+    /* выравнивание текста по центру */
+    text-align: center;
+}
+
+.main-section {
+    padding: 130px 0;
+}
+
+.main-section .main-section__title {
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.main-section .main-section__subtitle {
+    font-size: 24px;
+    color: $text-light-color;
+    /* тень текста */
+    text-shadow: 0px 3px 15px rgba(0, 0, 0, 0.64);
+    margin-bottom: 150px;
+}
+
+.main-section .product-card {
+    display: flex;
+    align-items: center;
+    background-color: $light-color;
+    width: 1030px;
+    /* выравнивание блока по центру по горизонтали */
+    margin: 0 auto;
+}
+
+.main-section .product-card .product-card__image {
+    margin-right: 30px;
+}
+
+.main-section .product-card .product-card__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    /* ширина задается для переноса текста на следующую строку */
+    width: 340px;
+}
+
+.main-section .product-card .rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-section .product-card .rating .rating__stars-wrap {
+    display: flex;
+    margin-right: 5px;
+}
+
+.main-section .product-card .rating .rating__number {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #787878;
+}
+
+.main-section .product-card .rating .rating__star {
+    background-image: url(./../assets/img/star-inactive.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 13px;
+    height: 13px;
+    margin-left: 3px;
+}
+
+.main-section .product-card .rating .rating__star.active {
+    background-image: url(./../assets/img/star-active.png);
+}
+
+.main-section .product-card .product-card__description-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    /* свойство, которое делает все буквы заглавными */
+    text-transform: uppercase;
+    position: relative;
+    display: inline;
+}
+
+.main-section .product-card .product-card__description-title:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    background-color: $active-color;
+}
+
+.main-section .product-card .product-card__description-content {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $text-gray-color;
+    /* высота строки */
+    line-height: 24px;
+    width: 390px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.main-section .product-card .price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.main-section .product-card .price__content {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 25px;
+}
+
+.main-section .product-card .price__button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $text-light-color;
+    background-color: $active-color;
+    padding: 17px 30px;
+    /* меняет внешний вид курсора при наведении на кнопку */
+    cursor: pointer;
+}
+
+.main-section .product-card .product-card__button_view-all {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: $text-active-color;
+    position: relative;
+}
+
+.main-section .product-card .product-card__button_view-all:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: $active-color;
+}
+
+.main-section .product-card {
+    padding: 50px 0;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+    /* скрывает элементы выходящие за пределы данного блока */
+    overflow: hidden;
+    /* управляет элементом по оси z (чем больше значение относительно других элементов, тем данный элемент будет выше) */
+    z-index: 2;
+    /* тень для блока */
+    box-shadow: 0px -8px 30px 0px rgba(0, 0, 0, 0.34);
+}
+
+/* треугольник */
+.main-section .product-card:before {
+    content: '';
+    position: absolute;
+    top: -374px;
+    left: -165px;
+    /* поворот блока (значение указывается в градусах) */
+    transform: rotate(39deg);
+    width: 0;
+    height: 0;
+    /* границы блока для каждой стороны */
+    border-top: 500px solid transparent;
+    border-right: 500px solid $active-color;
+    border-bottom: 500px solid transparent;
+    z-index: -2;
+}
+
+/* слово Boards */
+.main-section .product-card:after {
+    content: 'Boards';
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -270px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 135px;
+    font-weight: bold;
+    /* прозрачность */
+    opacity: 0.03;
+}

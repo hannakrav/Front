@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+a {
+    /* цвет текста */
+    color: #000;
+    /* удаление подчеркивания */
+    text-decoration: none;
+}
+
+li {
+    /* убрать маркеры у списка */
+    list-style-type: none;
+}
+
+ul {
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+button {
+    border: 0;
+}
